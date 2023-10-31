@@ -1,3 +1,19 @@
+# Dataset folder
+dataset-images/*
+
+# Vector cache
+cache/*
+
+# Gradio flagged
+flagged/
+
+# Virtual enviroment
+Scripts/
+pyvenv.cfg
+
+# share
+share/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
