@@ -20,7 +20,7 @@ with open(CACHE_FOLDER+"files.json", "r") as file:
 def search_vector(vector, K):
     vector = vector.detach().cpu().numpy()
     vector = np.float32(vector)
-    #faiss.normalize_L2(vector)
+    faiss.normalize_L2(vector)
     distances, indices = index.search(vector.astype('float32'), K)
     results = [[textos[v], float(distances[0][k])] for k, v in enumerate(indices[0])]   # float32 not compatible with json
     return results

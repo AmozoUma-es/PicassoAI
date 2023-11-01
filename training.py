@@ -49,7 +49,7 @@ time_processing = time.perf_counter()
 # FlatIP for cosine similarity
 index = faiss.IndexFlatIP(vectors_np.shape[1])
 
-#faiss.normalize_L2(vectors_np)
+faiss.normalize_L2(vectors_np)
 index.add(vectors_np.astype('float32'))
 
 #Store the index locally
