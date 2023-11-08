@@ -26,7 +26,7 @@ salida = gr.Interface(
     inputs=[
         gr.Textbox(label="Prompt"),
         gr.Image(label="Image"),
-        gr.Slider(minimum=1, maximum=12, default=6, step=1, label="Number of results")
+        gr.Slider(minimum=1, maximum=12, value=6, step=1, label="Number of results")
     ],
     outputs=[
         gr.Gallery( label="Images", show_label=False, elem_id="gallery", columns=[2], rows=[2], object_fit="contain", height="auto")  # Muestra las imagenes
